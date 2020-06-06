@@ -1,0 +1,243 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'general.ui'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+import os
+import pyqtgraph as pg
+import sys
+sys.path.append('utils/')
+import ctypes
+
+if os.name == 'nt':
+        myappid = 'mycompany.myproduct.subproduct.version' # arbitrary string
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        self.setWindowIcon(QtGui.QIcon(os.path.join('utils','logo.ico')))
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1337, 723)
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        MainWindow.setFont(font)
+        MainWindow.setStyleSheet("background-color: rgb(0, 0, 0);")
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.line = QtWidgets.QFrame(self.centralwidget)
+        self.line.setGeometry(QtCore.QRect(-140, 550, 3, 61))
+        self.line.setFrameShape(QtWidgets.QFrame.VLine)
+        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line.setObjectName("line")
+        self.lbDB = QtWidgets.QLabel(self.centralwidget)
+        self.lbDB.setGeometry(QtCore.QRect(190, 100, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbDB.setFont(font)
+        self.lbDB.setStyleSheet("color: rgb(255, 255, 255);")
+        self.lbDB.setObjectName("lbDB")
+        self.pbLoadDB = QtWidgets.QPushButton(self.centralwidget)
+        self.pbLoadDB.setGeometry(QtCore.QRect(230, 140, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pbLoadDB.setFont(font)
+        self.pbLoadDB.setStyleSheet("background-color: rgb(15, 76, 117);\n"
+"color: rgb(255, 255, 255);")
+        self.pbLoadDB.setObjectName("pbLoadDB")
+        self.lbSeg = QtWidgets.QLabel(self.centralwidget)
+        self.lbSeg.setGeometry(QtCore.QRect(190, 270, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbSeg.setFont(font)
+        self.lbSeg.setStyleSheet("color: rgb(255, 255, 255);")
+        self.lbSeg.setObjectName("lbSeg")
+        self.pbCreateDB = QtWidgets.QPushButton(self.centralwidget)
+        self.pbCreateDB.setGeometry(QtCore.QRect(230, 180, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pbCreateDB.setFont(font)
+        self.pbCreateDB.setStyleSheet("background-color: rgb(15, 76, 117);\n"
+"color: rgb(255, 255, 255);")
+        self.pbCreateDB.setObjectName("pbCreateDB")
+        self.pbSelectFolder = QtWidgets.QPushButton(self.centralwidget)
+        self.pbSelectFolder.setGeometry(QtCore.QRect(230, 310, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pbSelectFolder.setFont(font)
+        self.pbSelectFolder.setStyleSheet("background-color: rgb(15, 76, 117);\n"
+"color: rgb(255, 255, 255);")
+        self.pbSelectFolder.setObjectName("pbSelectFolder")
+        self.pbPlot = QtWidgets.QPushButton(self.centralwidget)
+        self.pbPlot.setGeometry(QtCore.QRect(520, 130, 121, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pbPlot.setFont(font)
+        self.pbPlot.setStyleSheet("background-color: rgb(15, 76, 117);\n"
+"color: rgb(255, 255, 255);")
+        self.pbPlot.setObjectName("pbPlot")
+        self.lbPredictName = QtWidgets.QLabel(self.centralwidget)
+        self.lbPredictName.setGeometry(QtCore.QRect(820, 130, 281, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setUnderline(False)
+        font.setWeight(75)
+        self.lbPredictName.setFont(font)
+        self.lbPredictName.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.lbPredictName.setStyleSheet("color: rgb(0, 170, 255);\n"
+"background-color: rgb(0, 0, 0);\n"
+"border-color: rgb(187, 225, 250);")
+        self.lbPredictName.setText("")
+        self.lbPredictName.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.lbPredictName.setObjectName("lbPredictName")
+        self.lbStatus = QtWidgets.QLabel(self.centralwidget)
+        self.lbStatus.setGeometry(QtCore.QRect(1140, 70, 61, 20))
+        self.lbStatus.setStyleSheet("color: rgb(170, 0, 0);")
+        self.lbStatus.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbStatus.setObjectName("lbStatus")
+        self.lbMaintitle = QtWidgets.QLabel(self.centralwidget)
+        self.lbMaintitle.setGeometry(QtCore.QRect(530, 20, 280, 80))
+        self.lbMaintitle.setPixmap(QtGui.QPixmap(os.path.join(os.getcwd(),'utils','logo.png')))
+        font = QtGui.QFont()
+        font.setFamily("Candara Light")
+        font.setPointSize(48)
+        font.setBold(False)
+        font.setWeight(50)
+        self.lbMaintitle.setFont(font)
+        self.lbMaintitle.setStyleSheet("color: rgb(255, 255, 255);")
+        self.lbMaintitle.setText("")
+        self.lbMaintitle.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbMaintitle.setObjectName("lbMaintitle")
+        self.MplWidget = MplWidget(self.centralwidget)
+        self.MplWidget.setGeometry(QtCore.QRect(490, 410, 841, 251))
+        self.MplWidget.setStyleSheet("border-color: rgb(255, 255, 255);")
+        self.MplWidget.setObjectName("MplWidget")
+        self.gvTTF = pg.PlotWidget(self.centralwidget)
+        self.gvTTF.setGeometry(QtCore.QRect(520, 170, 681, 221))
+        self.gvTTF.setStyleSheet("background-color: rgb(0, 0, 0);\n"
+"gridline-color: rgb(0, 0, 0);\n"
+"border-top-color: rgb(0, 0, 0);\n"
+"border-color: rgb(0, 0, 0);")
+        self.gvTTF.setObjectName("gvTTF")
+        self.cbSegments = QtWidgets.QComboBox(self.centralwidget)
+        self.cbSegments.setGeometry(QtCore.QRect(230, 360, 151, 21))
+        #font = QtGui.QFont()
+        #font.setPointSize(11)
+        #font.setBold(False)
+        #font.setWeight(50)
+        #self.cbSegments.setFont(font)
+        self.cbSegments.setStyleSheet("color: rgb(255, 255, 255);\n"
+"background-color:  rgb(50, 130, 184);\n"
+"selection-background-color: rgb(0, 0, 127);")
+        self.cbSegments.setObjectName("cbSegments")
+        self.cbSegments.addItem("")
+        self.pbLoadSeg = QtWidgets.QPushButton(self.centralwidget)
+        self.pbLoadSeg.setGeometry(QtCore.QRect(280, 400, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pbLoadSeg.setFont(font)
+        self.pbLoadSeg.setStyleSheet("background-color: rgb(15, 76, 117);\n"
+"color: rgb(255, 255, 255);")
+        self.pbLoadSeg.setObjectName("pbLoadSeg")
+        self.pbPredict = QtWidgets.QPushButton(self.centralwidget)
+        self.pbPredict.setGeometry(QtCore.QRect(670, 130, 121, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pbPredict.setFont(font)
+        self.pbPredict.setStyleSheet("background-color: rgb(15, 76, 117);\n"
+"color: rgb(255, 255, 255);")
+        self.pbPredict.setObjectName("pbPredict")
+        self.lbRithm = QtWidgets.QLabel(self.centralwidget)
+        self.lbRithm.setGeometry(QtCore.QRect(190, 490, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
+        self.lbRithm.setFont(font)
+        self.lbRithm.setStyleSheet("color: rgb(255, 255, 255);")
+        self.lbRithm.setObjectName("lbRithm")
+        self.pbPredictRithm = QtWidgets.QPushButton(self.centralwidget)
+        self.pbPredictRithm.setGeometry(QtCore.QRect(230, 560, 151, 31))
+        font = QtGui.QFont()
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pbPredictRithm.setFont(font)
+        self.pbPredictRithm.setStyleSheet("background-color: rgb(15, 76, 117);\n"
+"color: rgb(255, 255, 255);")
+        self.pbPredictRithm.setObjectName("pbPredictRithm")
+        self.lbPredictRithm = QtWidgets.QLabel(self.centralwidget)
+        self.lbPredictRithm.setGeometry(QtCore.QRect(230, 620, 171, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setUnderline(False)
+        font.setWeight(75)
+        self.lbPredictRithm.setFont(font)
+        self.lbPredictRithm.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.lbPredictRithm.setStyleSheet("color: rgb(0, 170, 255);\n"
+"background-color: rgb(0, 0, 0);\n"
+"border-color: rgb(187, 225, 250);")
+        self.lbPredictRithm.setText("")
+        self.lbPredictRithm.setAlignment(QtCore.Qt.AlignCenter)
+        self.lbPredictRithm.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByMouse)
+        self.lbPredictRithm.setObjectName("lbPredictRithm")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "PredX"))
+        self.lbDB.setText(_translate("MainWindow", "Database:"))
+        self.pbLoadDB.setText(_translate("MainWindow", "Load"))
+        self.lbSeg.setText(_translate("MainWindow", "Track:"))
+        self.pbCreateDB.setText(_translate("MainWindow", "Create"))
+        self.pbSelectFolder.setText(_translate("MainWindow", "Select folder"))
+        self.pbPlot.setText(_translate("MainWindow", "Plot"))
+        self.pbLoadSeg.setText(_translate("MainWindow", "Load track"))
+        self.pbPredict.setText(_translate("MainWindow", "Predict name"))
+        self.lbRithm.setText(_translate("MainWindow", "Cardiac Rhythm"))
+        self.pbPredictRithm.setText(_translate("MainWindow", "Predict"))
+        self.cbSegments.setItemText(0, _translate("MainWindow", "Select a folder"))
+        self.lbStatus.setText(_translate("MainWindow", "."))
+
+
+from mplwidget import MplWidget
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+
