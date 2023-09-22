@@ -4,7 +4,7 @@
 
 Ingeniería biomédica.
 
-Unviersidad de los Andes.
+Universidad de los Andes.
 
 ## Descripción
 
